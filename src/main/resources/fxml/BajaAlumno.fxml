@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.gestionhorasapp.consultorablb.controladores.BajaAlumnoController">
+    <children>
+        <VBox spacing="10" alignment="TOP_CENTER" AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <Label text="Baja de Alumnos" style="-fx-font-size: 18px;"/>
+
+            <HBox spacing="10">
+                <Label text="Empresa:"/>
+                <ComboBox fx:id="empresaComboBox" promptText="Selecciona una empresa" prefWidth="200"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Grupo:"/>
+                <ComboBox fx:id="grupoComboBox" promptText="Selecciona un grupo" prefWidth="200"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Alumno:"/>
+                <ComboBox fx:id="alumnoComboBox" promptText="Selecciona un alumno" prefWidth="200"/>
+            </HBox>
+
+            <Button text="Eliminar" fx:id="eliminarButton" onAction="#eliminarAlumno"/>
+        </VBox>
+    </children>
+</AnchorPane>

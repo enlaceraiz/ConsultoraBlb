@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.gestionhorasapp.consultorablb.controladores.AgendarClaseController">
+    <children>
+        <VBox spacing="10" alignment="TOP_CENTER" AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <Label text="Agendar Clase" style="-fx-font-size: 18px;"/>
+
+            <HBox spacing="10">
+                <Label text="Empresa:"/>
+                <ComboBox fx:id="empresaComboBox" layoutX="100" layoutY="20" prefWidth="200"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Grupo:"/>
+                <ComboBox fx:id="grupoComboBox" layoutX="100" layoutY="60" prefWidth="200"/>
+
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Alumno:"/>
+                <ComboBox fx:id="alumnoComboBox" layoutX="100" layoutY="100" prefWidth="200"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Profesor:"/>
+                <ComboBox fx:id="profesorComboBox" prefWidth="200"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Fecha:"/>
+                <DatePicker fx:id="fechaPicker" prefWidth="200"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Hora:"/>
+                <TextField fx:id="horaField" promptText="Ej: 10:00" prefWidth="200" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Duración (min):"/>
+                <TextField fx:id="duracionTextField" promptText="Ej: 60" prefWidth="200" />
+            </HBox>
+
+            <Button text="Agendar" onAction="#agendarClase" fx:id="agendarButton" />
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.gestionhorasapp.consultorablb.controladores.AltaProfesorController">
+    <children>
+        <VBox spacing="10" alignment="TOP_CENTER" AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <Label text="Alta de Profesor" style="-fx-font-size: 18px;"/>
+
+            <HBox spacing="10">
+                <Label text="Nombre:"/>
+                <TextField fx:id="nombreField" promptText="Nombre del Profesor" prefWidth="200"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Apellido:"/>
+                <TextField fx:id="apellidoField" promptText="Apellido del Profesor" prefWidth="200"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Email:"/>
+                <TextField fx:id="emailField" promptText="Email del Profesor" prefWidth="200"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Especialidad:"/>
+                <ComboBox fx:id="especialidadComboBox" promptText="Selecciona una especialidad" prefWidth="200"/>
+            </HBox>
+
+            <Button text="Guardar" fx:id="guardarButton" onAction="#guardarProfesor"/>
+        </VBox>
+    </children>
+</AnchorPane>

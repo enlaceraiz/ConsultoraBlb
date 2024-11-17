@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.gestionhorasapp.consultorablb.controladores.ReportesController">
+    <children>
+        <!-- Tabla de Reportes -->
+        <TableView fx:id="reporteTable" layoutX="20.0" layoutY="20.0" prefHeight="300.0" prefWidth="760.0">
+            <columns>
+                <TableColumn fx:id="fechaColumn" text="Fecha" prefWidth="90.0" />
+                <TableColumn fx:id="horaColumn" text="Hora" prefWidth="90.0" />
+                <TableColumn fx:id="duracionColumn" text="Duración (min)" prefWidth="90.0" />
+                <TableColumn fx:id="alumnoColumn" text="Alumno" prefWidth="200.0" />
+                <TableColumn fx:id="empresaColumn" text="Empresa" prefWidth="150.0" />
+                <TableColumn fx:id="grupoColumn" text="Grupo" prefWidth="150.0" />
+                <TableColumn fx:id="profesorColumn" text="Profesor" prefWidth="200.0" />
+            </columns>
+        </TableView>
+
+        <!-- Filtros y Botones -->
+        <Label text="Seleccionar Alumno:" layoutX="20.0" layoutY="350.0" />
+        <ComboBox fx:id="alumnoComboBox" layoutX="150.0" layoutY="345.0" prefWidth="250.0" promptText="Seleccionar Alumno" />
+
+        <Label text="Seleccionar Profesor:" layoutX="420.0" layoutY="350.0" />
+        <ComboBox fx:id="profesorComboBox" layoutX="550.0" layoutY="345.0" prefWidth="250.0" promptText="Seleccionar Profesor" />
+
+        <Button fx:id="reporteAlumnoButton" layoutX="20.0" layoutY="400.0" prefWidth="200.0" text="Generar Reporte Alumno" onAction="#generarReporteAlumno" />
+        <Button fx:id="reporteProfesorButton" layoutX="250.0" layoutY="400.0" prefWidth="200.0" text="Generar Reporte Profesor" onAction="#generarReporteProfesor" />
+    </children>
+</AnchorPane>

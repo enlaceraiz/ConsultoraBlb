@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane prefHeight="387.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestionhorasapp.consultorablb.controladores.MainController">
+    <top>
+        <MenuBar>
+            <menus>
+                <!-- Menú Alumnos -->
+                <Menu text="Alumnos">
+                    <items>
+                        <MenuItem onAction="#mostrarAltaAlumno" text="Alta de Alumnos" />
+                        <MenuItem onAction="#mostrarBajaAlumno" text="Baja de Alumnos" />
+                        <MenuItem onAction="#mostrarModificacionAlumno" text="Modificación Alumnos" />
+                    </items>
+                </Menu>
+
+                <!-- Menú Profesores -->
+                <Menu text="Profesores">
+                    <items>
+                        <MenuItem onAction="#mostrarAltaProfesor" text="Alta de Profesores" />
+                        <MenuItem onAction="#mostrarBajaProfesor" text="Baja de Profesores" />
+                        <MenuItem onAction="#mostrarModificacionProfesor" text="Modificación Profesores" />
+                    </items>
+                </Menu>
+
+                <!-- Menú Clases -->
+                <Menu text="Clases">
+                    <items>
+                        <MenuItem onAction="#mostrarAgendarClase" text="Agendar Clase" />
+                        <MenuItem onAction="#mostrarEliminarClase" text="Eliminar Clase" />
+                    </items>
+                </Menu>
+
+                <!-- Menú Reportes -->
+                <Menu text="Reportes">
+                    <MenuItem onAction="#mostrarReportes" text="Reportes" />
+                </Menu>
+
+                <!-- Menú Salir -->
+                <Menu text="Salir">
+                    <MenuItem onAction="#salirAplicacion" text="Salir" />
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <StackPane fx:id="contenidoPrincipal" prefHeight="225.0" prefWidth="1099.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="383.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/LogoFinalBLB.png" />
+               </image>
+            </ImageView>
+         </children></StackPane>
+    </center>
+</BorderPane>
